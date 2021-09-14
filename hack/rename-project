@@ -32,12 +32,12 @@ done
 
 for file in "${files[@]}"
 do
-  sed -i '' -e "s/gardener\/machine-controller-manager-provider-sampleprovider/$project_name\/machine-controller-manager-provider-$provider_name_small_case/g" $file
+  sed -i '' -e "s/gardener\/machine-controller-manager-provider-hcloud/$project_name\/machine-controller-manager-provider-$provider_name_small_case/g" $file
 done
 
-sed -i '' -e "s/sampleprovider/$provider_name_small_case/g" README.md
-sed -i '' -e "s/SampleProvider/$provider_name/g" README.md
-sed -i '' -e "1 s/sampleprovider/$provider_name_small_case/" NOTICE.md
+sed -i '' -e "s/hcloud/$provider_name_small_case/g" README.md
+sed -i '' -e "s/hcloud/$provider_name/g" README.md
+sed -i '' -e "1 s/hcloud/$provider_name_small_case/" NOTICE.md
 
 echo "Rename project from gardener to $project_name."
 echo "Please Update CODEOWNERS file to reflect relevant owners"
